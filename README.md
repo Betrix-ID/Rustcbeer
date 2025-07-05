@@ -15,5 +15,19 @@
 > - Otomatis membuka browser default saat server aktif.
 > - Binari dapat dikompresi menggunakan UPX untuk efisiensi distribusi.
 
-> [!NOTES]
+> [!NOTE]
 > Dengan desain yang fleksibel dan minimalis, script ini dapat digunakan sebagai solusi webserver lokal untuk keperluan pribadi, debugging, hingga pengujian frontend secara cepat dan praktis.
+
+> [!TIP]
+> Try Compiler Script server:
+> 1. edit and move files (html, css and js) to static folder  
+> 2. move all your projects to termux server then compile with `make` 
+> 3. After the compiler is finished, you can move the compiled project to wherever you want.  
+> Last step
+> Make sure all compiler outputs are free from errors or mistakes (file names, wrong directories, etc.) because if you compile it incorrectly, the server will not work.
+
+## Command Compiler static webui:
+> ` cp -r /sdcard/RustcBeer/live ~`
+>  `cd /live`
+>  `make`
+
