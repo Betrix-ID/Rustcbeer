@@ -1,53 +1,59 @@
 > ![git text](/server/IFS.png)
 
+# RustcBeer WebUI Server
+
+Server WebUI ringan berbasis Rust dan Actix-Web, dirancang untuk menyajikan halaman web statis secara lokal di perangkat Android (Termux) maupun Linux. Cocok untuk dokumentasi offline, UI konfigurasi, atau dashboard lokal.
+
+---
+
 > [!IMPORTANT]
-> RustcBeer WebUI Server adalah server ringan berbasis Rust dan Actix-Web untuk menyajikan antarmuka web statis seperti  HTML, CSS, dan JavaScript secara lokal.
-> Kompatibel untuk dijalankan di Android (melalui Termux) maupun sistem Linux lainnya, server ini mendeteksi folder static secara otomatis dari berbagai lokasi umum seperti /sdcard, /storage/emulated/0, dan direktori home pengguna.
-> Tanpa konfigurasi tambahan, server akan langsung membuka URL di browser default saat dijalankan. Cocok digunakan untuk dokumentasi offline, UI konfigurasi lokal, atau dashboard ringan.
+> RustcBeer WebUI Server mendeteksi folder `static` secara otomatis dari berbagai lokasi seperti:
+> - `/sdcard`
+> - `/storage/emulated/0`
+> - Direktori root pengguna
+> 
+> Saat dijalankan, server akan langsung membuka URL lokal di browser default pengguna. Tidak diperlukan konfigurasi tambahan.
+
+---
 
 > [!TIP]
-> Fitur Utama:
-> - Deteksi otomatis direktori static
-> - Kompatibel dengan Termux dan Linux
-> - Berbasis Rust dan Actix-Web: cepat dan ringan
-> - Penyajian langsung file HTML, CSS, JS, dan aset web lainnya
-> - Membuka browser default saat server berjalan
-> - Binary dapat dikompresi menggunakan UPX untuk efisiensi distribusi
+> Fitur Unggulan:
+> - Deteksi otomatis direktori `static`
+> - Kompatibel dengan Android (Termux) dan Linux
+> - Penyajian HTML, CSS, JS, dan aset web lainnya
+> - Dibangun dengan Rust dan Actix-Web: cepat dan ringan
+> - Browser default terbuka otomatis saat server berjalan
+> - Binary dapat dikompresi dengan UPX untuk distribusi
+
+---
 
 > [!NOTE]
-> Script ini dirancang dengan pendekatan minimalis dan fleksibel.
-> Tidak memerlukan file konfigurasi atau setup tambahan.
-> Cukup siapkan folder static dan jalankan binary server.
-> Setelah dikompilasi, binary dapat dipindahkan dan digunakan di mana saja.
+> Versi terbaru mendukung file konfigurasi opsional `static_path.txt` untuk menentukan lokasi folder `static` secara manual apabila deteksi otomatis gagal.
+> 
+> Fitur eksperimental seperti *auto-reload* dan *autentikasi lokal* sedang dalam tahap pengembangan.
+
+---
 
 > [!WARNING]
-> Pastikan struktur file sudah benar agar server dapat berjalan dengan baik:
-> Folder static harus berisi file index.html
-> Pastikan tidak ada kesalahan penamaan atau lokasi file
-> Proses kompilasi harus berhasil tanpa error
+> Pastikan struktur proyek sudah benar agar server dapat berjalan dengan baik:
+> - Folder `static` harus berisi `index.html`
+> - Tidak ada kesalahan nama file atau lokasi
+> - Proses kompilasi berhasil tanpa error
 
-Kompilasi WebUI
+---
 
-# Salin proyek ke direktori home Termux
+## Cara Kompilasi
+
+```bash
+# Salin proyek ke direktori Termux
 cp -r /sdcard/RustcBeer/live ~
 
 # Masuk ke direktori proyek
 cd ~/live
 
-# Kompilasi proyek
+# Jalankan kompilasi
 make
-
-Setelah kompilasi selesai, file binary dapat dipindahkan ke lokasi lain.
-Gunakan strip dan upx untuk mengurangi ukuran file jika diperlukan:
-
-strip target/release/rustcbeer
-upx --best target/release/rustcbeer
-
-> [!NOTE]
-> Versi terbaru mendukung file konfigurasi opsional `static_path.txt` untuk menentukan lokasi folder `static` secara manual jika deteksi otomatis gagal.
->  
-> Selain itu, fitur eksperimental seperti *auto-reload* dan *autentikasi lokal* sedang dalam tahap pengembangan.
-
+````
 <!-- Tambahkan ini di <head> HTML kamu -->
 <div align="center">
   If you like my work, please follow me or star my work on GitHub
