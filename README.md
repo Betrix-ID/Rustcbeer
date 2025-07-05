@@ -1,33 +1,83 @@
 > ![git text](/server/IFS.png)
 
 > [!IMPORTANT]
-> Script ini adalah server WebUI ringan berbasis Rust yang dirancang untuk menyajikan antarmuka web statis seperti HTML, CSS, dan JavaScript secara lokal di perangkat Android, Termux, maupun sistem Linux lainnya. Dengan mekanisme pencarian otomatis terhadap folder static yang berisi index.html, server ini memungkinkan konten web disajikan langsung dari berbagai lokasi penyimpanan seperti /sdcard, /storage/emulated/0, hingga root direktori pengguna, tanpa perlu konfigurasi manual.
-> Script ini ideal digunakan untuk menyajikan antarmuka konfigurasi lokal, dokumentasi offline, atau dashboard interaktif, terutama dalam pengembangan aplikasi Android atau utilitas CLI. Server ini juga membuka URL secara otomatis di browser default saat dijalankan, menjadikannya mudah digunakan bahkan oleh pengguna non-teknis.
-> Dikembangkan menggunakan bahasa pemrograman Rust dan framework Actix-Web, server ini mengutamakan efisiensi, kecepatan, dan footprint ringan. Setelah dikompilasi dalam mode release, file binari dapat dikompresi lebih lanjut menggunakan UPX agar ukuran output seminimal mungkin.
+> RustcBeer WebUI Server adalah server ringan berbasis Rust dan Actix-Web untuk menyajikan antarmuka web statis seperti  HTML, CSS, dan JavaScript secara lokal.
+
+> Kompatibel untuk dijalankan di Android (melalui Termux) maupun sistem Linux lainnya, server ini mendeteksi folder static secara otomatis dari berbagai lokasi umum seperti /sdcard, /storage/emulated/0, dan direktori home pengguna.
+
+> Tanpa konfigurasi tambahan, server akan langsung membuka URL di browser default saat dijalankan. Cocok digunakan untuk dokumentasi offline, UI konfigurasi lokal, atau dashboard ringan.
 
 > [!TIP]
 > Fitur Utama:
-> - Deteksi otomatis direktori static di berbagai lokasi sistem file.
-> - Kompatibel dengan perangkat Android (via Termux) maupun Linux reguler.
-> - Berbasis Rust & Actix-Web: ringan, cepat, dan stabil.
-> - Menyajikan file statis dengan index.html sebagai entry point.
-> - Mendukung JavaScript, CSS, dan aset statis lainnya.
-> - Otomatis membuka browser default saat server aktif.
-> - Binari dapat dikompresi menggunakan UPX untuk efisiensi distribusi.
+> - Deteksi otomatis direktori static
+> - Kompatibel dengan Termux dan Linux
+> - Berbasis Rust dan Actix-Web: cepat dan ringan
+> - Penyajian langsung file HTML, CSS, JS, dan aset web lainnya
+> - Membuka browser default saat server berjalan
+> - Binary dapat dikompresi menggunakan UPX untuk efisiensi distribusi
+
 
 > [!NOTE]
-> Dengan desain yang fleksibel dan minimalis, script ini dapat digunakan sebagai solusi webserver lokal untuk keperluan pribadi, debugging, hingga pengujian frontend secara cepat dan praktis.
+> Script ini dirancang dengan pendekatan minimalis dan fleksibel.
+> Tidak memerlukan file konfigurasi atau setup tambahan.
+> Cukup siapkan folder static dan jalankan binary server.
+> Setelah dikompilasi, binary dapat dipindahkan dan digunakan di mana saja.
 
-> [!TIP]
-> Try Compiler Script server:
-> 1. edit and move files (html, css and js) to static folder  
-> 2. move all your projects to termux server then compile with `make` 
-> 3. After the compiler is finished, you can move the compiled project to wherever you want.  
-> Last step
-> Make sure all compiler outputs are free from errors or mistakes (file names, wrong directories, etc.) because if you compile it incorrectly, the server will not work.
+> [!WARNING]
+>Pastikan struktur file sudah benar agar server dapat berjalan dengan baik:
 
-## Command Compiler static webui:
-> ` cp -r /sdcard/RustcBeer/live ~`
->  `cd /live`
->  `make`
+>Folder static harus berisi file index.html
+> Pastikan tidak ada kesalahan penamaan atau lokasi file
+> Proses kompilasi harus berhasil tanpa error
 
+Kompilasi WebUI
+
+# Salin proyek ke direktori home Termux
+cp -r /sdcard/RustcBeer/live ~
+
+# Masuk ke direktori proyek
+cd ~/live
+
+# Kompilasi proyek
+make
+
+Setelah kompilasi selesai, file binary dapat dipindahkan ke lokasi lain.
+Gunakan strip dan upx untuk mengurangi ukuran file jika diperlukan:
+
+strip target/release/rustcbeer
+upx --best target/release/rustcbeer
+
+
+> [!INFO]
+> Versi terbaru telah mendukung file konfigurasi opsional static_path.txt untuk menentukan lokasi folder static secara manual jika deteksi otomatis gagal.
+
+> Fitur eksperimental seperti auto-reload dan autentikasi lokal sedang dalam tahap pengembangan.
+
+
+<!-- Tambahkan ini di <head> HTML kamu -->
+<div align="center">
+  If you like my work, please follow me or star my work on GitHub
+  
+You can also show your concern by donating below.
+<div align="center">
+ </div>
+<hr/>
+
+  <div style="margin: 20px 0;">
+    <a href="https://www.instagram.com/pai_calll?igsh=OGZnYmZ5OGdiMG9r" target="_blank" style="text-decoration: none;">
+      <img src="https://img.shields.io/badge/-Instagram-red?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@pai.call" target="_blank" style="text-decoration: none;">
+      <img src="https://img.shields.io/badge/-TikTok-black?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok">
+    </a>
+    <a href="https://saweria.co/Uniccc" target="_blank" style="text-decoration: none;">
+      <img src="https://img.shields.io/badge/-Saweria-yellow?style=for-the-badge&logo=saweria&logoColor=white" alt="Saweria">
+    </a>
+    <a href="https://t.me/Yeye_PID" target="_blank" style="text-decoration: none;">
+      <img src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
+    </a>
+  </div>
+
+  <hr style="border: none; height: 1px; background: #ddd; margin: 40px 0;">
+
+</div>
