@@ -2,9 +2,7 @@
 
 > [!IMPORTANT]
 > RustcBeer WebUI Server adalah server ringan berbasis Rust dan Actix-Web untuk menyajikan antarmuka web statis seperti  HTML, CSS, dan JavaScript secara lokal.
-
 > Kompatibel untuk dijalankan di Android (melalui Termux) maupun sistem Linux lainnya, server ini mendeteksi folder static secara otomatis dari berbagai lokasi umum seperti /sdcard, /storage/emulated/0, dan direktori home pengguna.
-
 > Tanpa konfigurasi tambahan, server akan langsung membuka URL di browser default saat dijalankan. Cocok digunakan untuk dokumentasi offline, UI konfigurasi lokal, atau dashboard ringan.
 
 > [!TIP]
@@ -16,7 +14,6 @@
 > - Membuka browser default saat server berjalan
 > - Binary dapat dikompresi menggunakan UPX untuk efisiensi distribusi
 
-
 > [!NOTE]
 > Script ini dirancang dengan pendekatan minimalis dan fleksibel.
 > Tidak memerlukan file konfigurasi atau setup tambahan.
@@ -24,9 +21,8 @@
 > Setelah dikompilasi, binary dapat dipindahkan dan digunakan di mana saja.
 
 > [!WARNING]
->Pastikan struktur file sudah benar agar server dapat berjalan dengan baik:
-
->Folder static harus berisi file index.html
+> Pastikan struktur file sudah benar agar server dapat berjalan dengan baik:
+> Folder static harus berisi file index.html
 > Pastikan tidak ada kesalahan penamaan atau lokasi file
 > Proses kompilasi harus berhasil tanpa error
 
@@ -47,10 +43,8 @@ Gunakan strip dan upx untuk mengurangi ukuran file jika diperlukan:
 strip target/release/rustcbeer
 upx --best target/release/rustcbeer
 
-
 > [!INFO]
 > Versi terbaru telah mendukung file konfigurasi opsional static_path.txt untuk menentukan lokasi folder static secara manual jika deteksi otomatis gagal.
-
 > Fitur eksperimental seperti auto-reload dan autentikasi lokal sedang dalam tahap pengembangan.
 
 
