@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Fredoka:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
+  padding: 1.5rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 1rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 30px #ac65e2);
+  }
+  to {
+    filter: drop-shadow(0 0 15px #9d58d2);
+  }
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #2563eb;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.primary {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.btn.secondary {
+  background-color: #f1f5f9;
+  color: #333;
+}
+
+/* Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Feature block ala Saweria */
+.feature-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 6px 6px 0px #333333;
+  transition: transform 0.2s ease;
+  font-family: 'Fredoka', sans-serif;
+  min-height: 160px;
+  position: relative;
+  border: 1px solid #333333;
+}
+
+.feature-box:hover {
+  transform: translateY(-4px);
+}
+
+.feature-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.feature-box .emoji {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.feature-box p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.invisible {
+  background: transparent;
+  box-shadow: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.blue {
+  background-color: #c4f1f9;
+}
+.purple {
+  background-color: #dcd0ff;
+}
+.orange {
+  background-color: #eba547;
+}
+.pink {
+  background-color: #ffcfd6;
+}
+.green {
+  background-color: #c9f9c9;
+}

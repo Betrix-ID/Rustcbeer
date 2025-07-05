@@ -1,0 +1,23 @@
+# not allowed to design without offiial permission from the script creator 
+
+[package]
+name = "arm64"
+version = "1.0.1"
+edition = "2021"
+description = "Designed with freedom in mind, this Rust-based WebUI server lets you host any frontend anywhere — from SD cards to system roots."
+license = "GPL-3.0-or-later"
+homepage = "https://github.com/Betrix-ID"
+authors = ["@UnixID <betrix322@gmail.com>"]
+
+[dependencies]
+actix-web = "4"
+actix-files = "0.6"
+walkdir = "2.4"
+webbrowser = "0.8"
+
+[package.metadata]
+telegram_channel = "https://t.me/Yeye_PID"
+
+[profile.release]
+opt-level = "z"
+strip = "symbols"
