@@ -43,9 +43,10 @@ Gunakan strip dan upx untuk mengurangi ukuran file jika diperlukan:
 strip target/release/rustcbeer
 upx --best target/release/rustcbeer
 
-> [!INFORMASI]
-> Informasi tambahan: script ini kini mendukung penggunaan file konfigurasi opsional `static_path.txt` untuk menentukan lokasi folder `static` secara manual, apabila deteksi otomatis tidak berhasil.
-> Fitur eksperimental juga sedang dikembangkan, termasuk dukungan *auto-reload* saat file berubah dan autentikasi lokal untuk membatasi akses.
+> [!NOTE]
+> Versi terbaru mendukung file konfigurasi opsional `static_path.txt` untuk menentukan lokasi folder `static` secara manual jika deteksi otomatis gagal.
+>  
+> Selain itu, fitur eksperimental seperti *auto-reload* dan *autentikasi lokal* sedang dalam tahap pengembangan.
 
 <!-- Tambahkan ini di <head> HTML kamu -->
 <div align="center">
