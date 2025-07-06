@@ -40,8 +40,7 @@ Server WebUI ringan berbasis Rust dan Actix-Web, dirancang untuk menyajikan hala
 
 ------
 
-## inggin menggunakan RustcBeer sebagai Api utama webui 
-## kalian maka ikutin langkah² nya 
+## Ingin belajar cara memodifikasi dan mengompilasi ini?
 
 ```bash
 # 1. Modifikasi folder and files)
@@ -74,7 +73,7 @@ Server WebUI ringan berbasis Rust dan Actix-Web, dirancang untuk menyajikan hala
 ````
 > ![big text](/server/scp.png)
 
->  hasil akhir dari compiler projek
+>  hasil akhir dari compiler projek.
 >  Semoga informasi ini dapat menbatu dan menambah ilmu anda...
   
 
