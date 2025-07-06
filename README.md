@@ -4,8 +4,6 @@
 
 Server WebUI ringan berbasis Rust dan Actix-Web, dirancang untuk menyajikan halaman web statis secara lokal di perangkat Android (Termux) maupun Linux. Cocok untuk dokumentasi offline, UI konfigurasi, atau dashboard lokal.
 
----
-
 > [!IMPORTANT]
 > RustcBeer WebUI Server mendeteksi folder `static` secara otomatis dari berbagai lokasi seperti:
 > - `/sdcard`
@@ -13,8 +11,6 @@ Server WebUI ringan berbasis Rust dan Actix-Web, dirancang untuk menyajikan hala
 > - Direktori root pengguna
 > 
 > Saat dijalankan, server akan langsung membuka URL lokal di browser default pengguna. Tidak diperlukan konfigurasi tambahan.
-
----
 
 > [!TIP]
 > Fitur Unggulan:
@@ -25,22 +21,16 @@ Server WebUI ringan berbasis Rust dan Actix-Web, dirancang untuk menyajikan hala
 > - Browser default terbuka otomatis saat server berjalan
 > - Binary dapat dikompresi dengan UPX untuk distribusi
 
----
-
 > [!NOTE]
 > Versi terbaru mendukung file konfigurasi opsional `static_path.txt` untuk menentukan lokasi folder `static` secara manual apabila deteksi otomatis gagal.
 > 
 > Fitur eksperimental seperti *auto-reload* dan *autentikasi lokal* sedang dalam tahap pengembangan.
-
----
 
 > [!WARNING]
 > Pastikan struktur proyek sudah benar agar server dapat berjalan dengan baik:
 > - Folder `static` harus berisi `index.html`
 > - Tidak ada kesalahan nama file atau lokasi
 > - Proses kompilasi berhasil tanpa error
-
----
 
 ## inggin menggunakan RustcBeer sebagai Api utama webui 
 ## kalian maka ikutin langkah² nya 
@@ -72,6 +62,10 @@ Server WebUI ringan berbasis Rust dan Actix-Web, dirancang untuk menyajikan hala
   kalian bisa masuk ke dalam folder yang di dalam nya
   ada file (makefile), setelah itu Jalankan kompilasi
    [ make ]
+
+> ![big text](/server/scp.png)
+    hasil akhir dari compiler projek
+
 ````
 
 
