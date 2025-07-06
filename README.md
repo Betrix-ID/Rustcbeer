@@ -73,7 +73,7 @@ Server WebUI ringan berbasis Rust dan Actix-Web, dirancang untuk menyajikan hala
 # 7.)
  jika anda sudah menyelesaikan conpiler nya anda bisa
  memindahkan projek yang sudah anda compiler
- anda tadi ke dir sdcard , storage dan lain²nya sesuai
+ tadi ke dir sdcard , storage dan lain²nya sesuai
  kemaun amda, anda juga bebas memilih metode execute nya
  mau ADB shell , magisk or lain²nya sesuai yang anda mau
  Notes --> Selagi anda memahami modifikasi nya dill
