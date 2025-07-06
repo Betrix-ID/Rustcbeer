@@ -42,18 +42,39 @@ Server WebUI ringan berbasis Rust dan Actix-Web, dirancang untuk menyajikan hala
 
 ---
 
-## Cara Kompilasi
+## inggin menggunakan RustcBeer sebagai Api utama webui 
+## kalian maka ikutin langkah² nya 
 
 ```bash
-# Salin proyek ke direktori Termux
-cp -r /sdcard/RustcBeer/live ~
+# 1. Modifikasi folder and files)
+  Download sumber Porjek (RustcBeer).
+# 2.)
+  Modifikasi atau tambahakan files projek
+  (Html ,css or javascript) kamu ke dalam
+  folder static.
+# 3.)
+  Pastikan semua dir yang ada di dalam makefile
+  and main.rs sudah anda edit sesuai dir projek kalian
 
-# Masuk ke direktori proyek
-cd ~/live
+# 4. Pengcompilasian projek di dalam termux)
+  Pindahkan folder projek yang kalian sudah edit ke
+  Home dir nya termux dengan cara
+  cp -r /dir jalur /dir name projek ~
 
-# Jalankan kompilasi
-make
+# 5.)
+  Setelah itu kalian bisa install semua
+  tools² nya terlebih dahulu
+
+  pkg update -y && pkg upgrade && pkg install rust -y
+  pkg install make -y && pkg install upx -y
+
+# 6.)
+  kalian bisa masuk ke dalam folder yang di dalam nya
+  ada file (makefile), setelah itu Jalankan kompilasi
+   [ make ]
 ````
+
+
 <!-- Tambahkan ini di <head> HTML kamu -->
 <div align="center">
   If you like my work, please follow me or star my work on GitHub
